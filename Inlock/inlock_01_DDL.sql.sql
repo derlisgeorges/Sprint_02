@@ -1,0 +1,33 @@
+CREATE DATABASE Inlock;
+
+USE Inlock;
+
+CREATE TABLE Estudios
+(
+	idEstudio INT PRIMARY KEY IDENTITY,
+	nomeEstudio VARCHAR(250)NOT NULL
+);
+
+CREATE TABLE Jogos
+(
+	idJogo INT PRIMARY KEY IDENTITY,
+	idEstudio INT FOREIGN KEY REFERENCES Estudios(idEstudio),
+	nomeJogo VARCHAR(250)NOT NULL,
+	descricao VARCHAR(250)NOT NULL,
+	dataLancamento VARCHAR(250)NOT NULL,
+	valor VARCHAR(250)
+);
+
+CREATE TABLE TiposDeUsuario
+(
+	idTipoUsuario INT PRIMARY KEY IDENTITY,
+	titulo VARCHAR(250)NOT NULL
+);
+
+CREATE TABLE Usuario
+(
+	idUsuario INT PRIMARY KEY IDENTITY,
+	idTipoUsuario INT FOREIGN KEY REFERENCES TiposDeUsuario(IdTipoUsuario),
+	email VARCHAR(250)NOT NULL,	
+	senha VARCHAR(12)NOT NULL
+);
