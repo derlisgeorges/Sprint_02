@@ -2,3 +2,5 @@ Domains
 Interfaces 
 Repository
 Controllers
+
+Scaffold-Dbcontext "Data Source=LAB08DESK301\SQLEXPRESS; initial catalog=SENAI_HROADS; integrated security=true;" Microsoft.EntityframeworkCore.SqlServer -OutputDir Domains -ContextDir Contexts -Context HroadsContext
