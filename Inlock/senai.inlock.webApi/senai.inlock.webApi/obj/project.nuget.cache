@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zHfnmyfFlBIuhGTv9grzriocKxNl0aFPA7LoIAxLqWpGBhRQSFDpBjN5PgYBz6X899+rqOMVtYtUa8xu3VB0+w==",
+  "dgSpecHash": "FR6EXqqn5n5O20oLal11zyioiNZrGycH9nvuGhwd0sqL/aOF2IJYhARISnQZL/CCpWlaKqzHWPvmsdVmGJGOhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DEV\\Desktop\\Inlock\\senai.inlock.webApi\\senai.inlock.webApi\\senai.inlock.webApi.csproj",
+  "projectFilePath": "C:\\Users\\DEV\\Desktop\\Sprint_02\\Inlock\\senai.inlock.webApi\\senai.inlock.webApi\\senai.inlock.webApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DEV\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\DEV\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
