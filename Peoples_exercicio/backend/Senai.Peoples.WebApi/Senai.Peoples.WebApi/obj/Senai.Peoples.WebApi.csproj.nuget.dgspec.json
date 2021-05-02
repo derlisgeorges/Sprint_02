@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DEV\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj": {}
+    "C:\\Users\\dsgez\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DEV\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj": {
+    "C:\\Users\\dsgez\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DEV\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\dsgez\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj",
         "projectName": "Senai.Peoples.WebApi",
-        "projectPath": "C:\\Users\\DEV\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj",
-        "packagesPath": "C:\\Users\\DEV\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DEV\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\obj\\",
+        "projectPath": "C:\\Users\\dsgez\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj",
+        "packagesPath": "C:\\Users\\dsgez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dsgez\\Desktop\\Sprint_02\\Peoples_exercicio\\backend\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DEV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dsgez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,20 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"

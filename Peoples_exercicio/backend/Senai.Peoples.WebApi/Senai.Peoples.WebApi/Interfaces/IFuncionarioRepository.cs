@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace Senai.Peoples.WebApi.Interfaces
 {
-    interface IFuncionarioRepository
+    interface IFuncionarioRepository 
     {
-        List<FuncionarioDomain> Listartodos();
-       
+
+        List<FuncionarioDomain> ListarTodos();
+
+        FuncionarioDomain BuscarPorId(int id);
+
+        void Cadastrar(FuncionarioDomain novoFuncionario);
+
+        void Atualizar(int id, FuncionarioDomain funcionarioAtualizar);
+
+        void Deletar(int id);
     }
 }

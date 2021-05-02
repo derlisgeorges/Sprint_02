@@ -12,7 +12,7 @@ namespace senai.inlock.webApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EstudiosController : ControllerBase
+    public class    Controller : ControllerBase
     {
 
         /// <summary>

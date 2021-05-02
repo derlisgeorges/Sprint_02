@@ -31,7 +31,7 @@ namespace Senai.Peoples.WebApi
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();     
+                endpoints.MapControllers();
             });
         }
     }

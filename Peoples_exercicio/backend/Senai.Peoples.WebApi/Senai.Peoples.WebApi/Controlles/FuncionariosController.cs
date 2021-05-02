@@ -8,9 +8,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Senai.Peoples.WebApi.Controllers
+namespace Senai.Peoples.WebApi.Controlles
 {
-    [Produces("application/json")]
+    [Produces ("aplication/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class FuncionariosController : ControllerBase
@@ -24,13 +24,11 @@ namespace Senai.Peoples.WebApi.Controllers
         }
 
         [HttpGet]
-
         public IActionResult Get()
         {
-            List<FuncionarioDomain> funcionarios = _funcionarioRepository.Listartodos();
+            List<FuncionarioDomain> funcionarios = _funcionarioRepository.ListarTodos();
 
             return Ok(funcionarios);
-
         }
     }
 }
