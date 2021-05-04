@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace senai.spmedgroup.wepApi.Repositories
 {
-    public class SituacaoRepository : ISituacaoRepository
+    public class MedicoRepository : IMedicoRepository
     {
         SpMedGroupContext ctx = new SpMedGroupContext();
 
-        public void Atualizar(int id, Situacao situacaoAtualizada)
+        public void Atualizar(int id, Medico medicoAtualizado)
         {
             throw new NotImplementedException();
         }
 
-        public Situacao BuscarPorId(int id)
+        public Medico BuscarPorId(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Cadastrar(Situacao novaSituacao)
+        public void Cadastrar(Medico novoMedico)
         {
             throw new NotImplementedException();
         }
@@ -32,7 +32,7 @@ namespace senai.spmedgroup.wepApi.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Situacao> Listar()
+        public List<Medico> Listar()
         {
             throw new NotImplementedException();
         }

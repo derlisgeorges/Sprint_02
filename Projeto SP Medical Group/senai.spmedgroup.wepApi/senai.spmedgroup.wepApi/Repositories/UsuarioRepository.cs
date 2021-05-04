@@ -1,4 +1,5 @@
-﻿using senai.spmedgroup.wepApi.Domains;
+﻿using senai.spmedgroup.wepApi.Contexts;
+using senai.spmedgroup.wepApi.Domains;
 using senai.spmedgroup.wepApi.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,13 @@ namespace senai.spmedgroup.wepApi.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+
+        SpMedGroupContext ctx = new SpMedGroupContext();
+
+
         public void Atualizar(int id, Usuario usuarioAtualizado)
         {
-            throw new NotImplementedException();
+            Usuario usuario = ctx.Usuarios.Find(id);
         }
 
         public Usuario BuscarPorId(int id)
@@ -30,6 +35,11 @@ namespace senai.spmedgroup.wepApi.Repositories
         }
 
         public List<Usuario> Listar()
+        {
+            return ctx.Usuarios.ToList();
+        }
+
+        public Usuario Login(string email, string senha)
         {
             throw new NotImplementedException();
         }

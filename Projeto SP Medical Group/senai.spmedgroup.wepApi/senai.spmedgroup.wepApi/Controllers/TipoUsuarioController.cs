@@ -10,18 +10,18 @@ using System.Threading.Tasks;
 
 namespace senai.spmedgroup.wepApi.Controllers
 {
-    [Produces("aplication/json")]
+    [Produces("application/json")]
 
     [Route("api/[controller]")]
 
     [ApiController]
     public class TipoUsuarioController : ControllerBase
     {
-        private ITipoUsuarioRepository _tipoUsuarioRepository { get; set; }
+        private ITipoUsuarioRepository TipoUsuarioRepository { get; set; }
 
         public TipoUsuarioController()
         {
-            _tipoUsuarioRepository = new TipoUsuarioRepository();
+           TipoUsuarioRepository = new TipoUsuarioRepository();
 
         }
 
@@ -31,7 +31,7 @@ namespace senai.spmedgroup.wepApi.Controllers
             try
             {
                 
-                return Ok(_tipoUsuarioRepository.Listar());
+                return Ok(TipoUsuarioRepository.Listar());
             }
             catch (Exception erro)
             {
@@ -44,7 +44,7 @@ namespace senai.spmedgroup.wepApi.Controllers
         {
             try
             {
-                return Ok(_tipoUsuarioRepository.BuscarPorId(id));
+                return Ok(TipoUsuarioRepository.BuscarPorId(id));
             }
             catch (Exception erro)
             {
@@ -58,7 +58,7 @@ namespace senai.spmedgroup.wepApi.Controllers
             try
             {
                 // Faz a chamada para o método
-                _tipoUsuarioRepository.Cadastrar(novoTipousuario);
+                TipoUsuarioRepository.Cadastrar(novoTipousuario);
 
                 // Retorna um status code
                 return StatusCode(201);
@@ -75,7 +75,7 @@ namespace senai.spmedgroup.wepApi.Controllers
             try
             {
                 // Faz a chamada para o método
-                _tipoUsuarioRepository.Atualizar(id, tipoUsuarioAtualizado);
+                TipoUsuarioRepository.Atualizar(id, tipoUsuarioAtualizado);
 
                 // Retorna um status code
                 return StatusCode(204);
@@ -92,7 +92,7 @@ namespace senai.spmedgroup.wepApi.Controllers
             try
             {
                 // Faz a chamada para o método
-                _tipoUsuarioRepository.Deletar(id);
+                TipoUsuarioRepository.Deletar(id);
 
                 // Retorna um status code
                 return StatusCode(204);
@@ -101,6 +101,8 @@ namespace senai.spmedgroup.wepApi.Controllers
             {
                 return BadRequest(ex);
             }
+
+
 
         }
 
