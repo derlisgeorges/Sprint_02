@@ -11,30 +11,59 @@ namespace senai.spmedgroup.wepApi.Repositories
     public class ConsultaRepository : IConsultaRepository
     {
         SpMedGroupContext ctx = new SpMedGroupContext();
-
-        public void Atualizar(int id, Consulta consultaAtualizada)
+        public void Atualizar(int id, Consulta ConsultaAtualizada)
         {
-            throw new NotImplementedException();
+            Consulta ConsultaAntiga = ctx.Consultas.Find(id);
+
+            if (ConsultaAtualizada.IdPaciente !=0)
+            {
+                ConsultaAntiga.IdPaciente = ConsultaAtualizada.IdPaciente;
+            }
+
+            if (ConsultaAtualizada.IdSituacao !=0)
+            {
+                ConsultaAntiga.IdSituacao = ConsultaAtualizada.IdSituacao;
+            }
+
+            if (ConsultaAtualizada.HoraConsulta !=null)
+            {
+                ConsultaAntiga.HoraConsulta = ConsultaAtualizada.HoraConsulta;
+            }
+
+            if (ConsultaAtualizada.DataConsulta !=null)
+            {
+                ConsultaAntiga.DataConsulta = ConsultaAtualizada.DataConsulta;
+            }
+
+
         }
 
         public Consulta BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Consultas.FirstOrDefault(tu => tu.IdConsulta == id);
         }
 
         public void Cadastrar(Consulta novaConsulta)
         {
-            throw new NotImplementedException();
+            ctx.Consultas.Add(novaConsulta);
+
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            Consulta ConsultaBuscado = ctx.Consultas.Find(id);
+
+
+            ctx.Consultas.Remove(ConsultaBuscado);
+
+            ctx.SaveChanges();
         }
 
         public List<Consulta> Listar()
         {
-            return ctx.Presencas.ToList();
+            return ctx.Consultas.ToList();
         }
     }
 }

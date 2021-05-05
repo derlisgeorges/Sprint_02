@@ -14,27 +14,40 @@ namespace senai.spmedgroup.wepApi.Repositories
 
         public void Atualizar(int id, Situacao situacaoAtualizada)
         {
-            throw new NotImplementedException();
+            Situacao SituacaoAntiga = ctx.Situacaos.Find(id);
+
+            if (situacaoAtualizada.Situacao1 !=null)
+            {
+                SituacaoAntiga.Situacao1 = situacaoAtualizada.Situacao1;
+            }
         }
 
         public Situacao BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Situacaos.FirstOrDefault(tu => tu.IdSituacao == id);
         }
 
         public void Cadastrar(Situacao novaSituacao)
         {
-            throw new NotImplementedException();
+            ctx.Situacaos.Add(novaSituacao);
+
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            Situacao SituacaoBuscada = ctx.Situacaos.Find(id);
+
+
+            ctx.Situacaos.Remove(SituacaoBuscada);
+
+            ctx.SaveChanges();
         }
 
         public List<Situacao> Listar()
         {
-            throw new NotImplementedException();
+            return ctx.Situacaos.ToList();
         }
     }
 }

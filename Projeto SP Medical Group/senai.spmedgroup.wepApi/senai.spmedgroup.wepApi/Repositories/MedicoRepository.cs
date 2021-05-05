@@ -8,33 +8,81 @@ using System.Threading.Tasks;
 
 namespace senai.spmedgroup.wepApi.Repositories
 {
+
     public class MedicoRepository : IMedicoRepository
     {
         SpMedGroupContext ctx = new SpMedGroupContext();
 
-        public void Atualizar(int id, Medico medicoAtualizado)
+
+        public void Atualizar(int id, Medico MedicoAtualizado)
         {
-            throw new NotImplementedException();
+
+            Medico MedicoAntigo= ctx.Medicos.Find(id);
+            
+            if (MedicoAtualizado.IdClinica != 0)
+            {
+                MedicoAntigo.IdClinica = MedicoAtualizado.IdClinica;
+            }
+
+            if (MedicoAtualizado.Crm != null)
+            {
+                MedicoAntigo.Crm = MedicoAtualizado.Crm;
+            }
+
+            if (MedicoAtualizado.IdUsuario !=0)
+            {
+                MedicoAntigo.IdUsuario = MedicoAtualizado.IdUsuario;
+            }
+
+            if (MedicoAtualizado.IdEspecialidade != 0)
+            {
+                MedicoAntigo.IdEspecialidade = MedicoAtualizado.IdEspecialidade;
+            }
+
+            if (MedicoAtualizado.NomeMedico != null)
+            {
+                MedicoAntigo.NomeMedico = MedicoAtualizado.NomeMedico;
+            }
+
+            ctx.Medicos.Update(MedicoAtualizado);
+
+           
+            ctx.SaveChanges();
         }
 
+     
         public Medico BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            
+            return ctx.Medicos.FirstOrDefault(tu => tu.IdMedico == id);
         }
 
+        
         public void Cadastrar(Medico novoMedico)
         {
-            throw new NotImplementedException();
+          
+            ctx.Medicos.Add(novoMedico);
+
+         
+            ctx.SaveChanges();
         }
 
+     
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+           
+            Medico MedicoBuscado = ctx.Medicos.Find(id);
+
+            
+            ctx.Medicos.Remove(MedicoBuscado);
+
+            ctx.SaveChanges();
         }
 
         public List<Medico> Listar()
         {
-            throw new NotImplementedException();
+            
+            return ctx.Medicos.ToList();
         }
     }
 }
