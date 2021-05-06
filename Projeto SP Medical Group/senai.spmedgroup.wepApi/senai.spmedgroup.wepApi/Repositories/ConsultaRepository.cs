@@ -141,5 +141,14 @@ namespace senai.spmedgroup.wepApi.Repositories
             ctx.SaveChanges();
         }
 
+        public void NovaAtualizacao(int id, string Descricaoatulizada)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void NovaDescricao(int id, string statusAtualizado)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
