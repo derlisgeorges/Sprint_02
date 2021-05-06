@@ -22,5 +22,11 @@ namespace senai.spmedgroup.wepApi.Interfaces
 
 
         void Deletar(int id);
+
+        void NovaAtualizacao(int id, string Descricaoatulizada);
+
+        void NovaDescricao(int id, string statusAtualizado);
+
+        List<Consulta> ListarMinhas(int id);
     }
 }

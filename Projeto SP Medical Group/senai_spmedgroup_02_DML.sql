@@ -62,10 +62,10 @@ VALUES				(1,1,17,'Ricardo Lemos','10359-SP')
 					,(1,2,6,'Roberto Possarle','74114-SP')
 					,(1,3,10,'Helena Strada','94710-SP');
 
-INSERT INTO  Consultas (idPaciente, idSituacao, idMedico, horaConsulta, dataConsulta)
-VALUES					(1,3,2, '07:00','07/07/2021')
-						,(2,1,3,'09:30','29/12/2021')
-						,(3,3,2,'10:00','16/01/2021')
-						,(4,2,1,'13:00','11/09/2021')
-						,(5,1,2,'14:45','25/05/2021')
-						,(6,2,1,'15:00','19/03/2021');
+INSERT INTO  Consultas (idPaciente, idSituacao, idMedico, horaConsulta, dataConsulta, descricao)
+VALUES					(1,3,2, '07:00','07/07/2021','')
+						,(2,1,3,'09:30','29/12/2021','')
+						,(3,3,2,'10:00','16/01/2021','')
+						,(4,2,1,'13:00','11/09/2021','')
+						,(5,1,2,'14:45','25/05/2021','')
+						,(6,2,1,'15:00','19/03/2021','');

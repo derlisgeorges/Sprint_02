@@ -13,14 +13,14 @@ CREATE TABLE Clinicas
 	,HorarioFechamento TIME NOT NULL
 
 );
-
+GO
 
 CREATE TABLE tipoUsuarios
 (
 	idTipoUsuario INT PRIMARY KEY IDENTITY
 	,tituloTipoUsuario VARCHAR (200) NOT NULL
 );
-
+GO
 
 CREATE TABLE Usuarios
 (
@@ -30,6 +30,7 @@ CREATE TABLE Usuarios
 	,Email VARCHAR (200) NOT NULL 
 	,Senha VARCHAR (200) NOT NULL
 );
+GO
 
 
 CREATE TABLE Pacientes
@@ -43,7 +44,7 @@ CREATE TABLE Pacientes
 	,Cpf VARCHAR (200) NOT NULL
 	,Endereco VARCHAR (200) NOT NULL
 );
-
+GO
 
 CREATE TABLE Especialidades
 (
@@ -51,14 +52,14 @@ CREATE TABLE Especialidades
 	,nomeEspecialide VARCHAR (200) NOT NULL
 
 );
-
+GO
 
 CREATE TABLE Situacao 
 (
 	IdSituacao INT PRIMARY KEY IDENTITY
 	,Situacao VARCHAR (200) NOT NULL
 );
-
+GO
 
 CREATE TABLE Medicos
 (
@@ -69,7 +70,7 @@ CREATE TABLE Medicos
 	,NomeMedico VARCHAR (200) NOT NULL 
 	,Crm VARCHAR (100) NOT NULL
 );
-
+GO
 
 CREATE TABLE Consultas
 (
@@ -79,4 +80,9 @@ CREATE TABLE Consultas
 	,idMedico INT FOREIGN KEY REFERENCES	Medicos  (idMedico)
 	,horaConsulta VARCHAR(200) NOT NULL
 	,dataConsulta DATE NOT NULL
+	,descricao VARCHAR (200) NOT NULL
 );
+GO
+
+
+

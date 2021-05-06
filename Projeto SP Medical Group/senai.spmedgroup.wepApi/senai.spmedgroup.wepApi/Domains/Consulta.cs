@@ -13,6 +13,7 @@ namespace senai.spmedgroup.wepApi.Domains
         public int? IdMedico { get; set; }
         public string HoraConsulta { get; set; }
         public DateTime DataConsulta { get; set; }
+        public string Descricao { get; set; }
 
         public virtual Medico IdMedicoNavigation { get; set; }
         public virtual Paciente IdPacienteNavigation { get; set; }

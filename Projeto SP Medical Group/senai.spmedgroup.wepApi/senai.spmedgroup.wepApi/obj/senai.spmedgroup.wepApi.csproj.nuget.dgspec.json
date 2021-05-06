@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DEV\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi.csproj": {}
+    "C:\\Users\\dev\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DEV\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi.csproj": {
+    "C:\\Users\\dev\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DEV\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi.csproj",
+        "projectUniqueName": "C:\\Users\\dev\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi.csproj",
         "projectName": "senai.spmedgroup.wepApi",
-        "projectPath": "C:\\Users\\DEV\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi.csproj",
-        "packagesPath": "C:\\Users\\DEV\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DEV\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\obj\\",
+        "projectPath": "C:\\Users\\dev\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dev\\Desktop\\Sprint_02\\Projeto SP Medical Group\\senai.spmedgroup.wepApi\\senai.spmedgroup.wepApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DEV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
