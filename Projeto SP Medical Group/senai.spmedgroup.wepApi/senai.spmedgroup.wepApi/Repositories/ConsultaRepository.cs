@@ -36,6 +36,16 @@ namespace senai.spmedgroup.wepApi.Repositories
                 ConsultaAntiga.DataConsulta = ConsultaAtualizada.DataConsulta;
             }
 
+            if (ConsultaAtualizada.Descricao !=null)
+            {
+                ConsultaAntiga.Descricao = ConsultaAntiga.Descricao;
+            }
+
+            if (ConsultaAtualizada.Descricao == null)
+            {
+                ConsultaAntiga.Descricao = ConsultaAntiga.Descricao;
+            }
+
 
         }
 
@@ -54,10 +64,10 @@ namespace senai.spmedgroup.wepApi.Repositories
 
         public void Deletar(int id)
         {
-            Consulta ConsultaBuscado = ctx.Consultas.Find(id);
+            Consulta ConsultaAntiga = ctx.Consultas.Find(id);
 
 
-            ctx.Consultas.Remove(ConsultaBuscado);
+            ctx.Consultas.Remove(ConsultaAntiga);
 
             ctx.SaveChanges();
         }
@@ -77,8 +87,59 @@ namespace senai.spmedgroup.wepApi.Repositories
                 // Adiciona na busca as informações da Instituição deste evento
                 .Include(p => p.IdSituacaoNavigation)
                 // Estabelece como parâmetro de consulta o ID do usuário recebido
-                .Where(p => p.Id == id)
+                .Where(p => p.IdConsulta == id)
                 .ToList();
         }
+
+        public void AlterStatus(int id, string ConsultaPermissao)
+        {
+            Consulta ConsultaAntiga = ctx.Consultas
+
+                .Include(p => p.IdMedicoNavigation)
+
+                .Include(p => p.IdPacienteNavigation)
+
+                .Include(p => p.IdSituacaoNavigation)
+
+                .FirstOrDefault(p => p.IdConsulta == id);
+
+            switch (ConsultaPermissao)
+            {
+                case "1":
+                    ConsultaAntiga.IdSituacao = 1;
+                    break;
+
+                case "2":
+                    ConsultaAntiga.IdSituacao = 2;
+                    break;
+
+                case "3":
+                    ConsultaAntiga.IdSituacao = 3;
+                    break;
+
+                default:
+                    ConsultaAntiga.IdSituacao = ConsultaAntiga.IdSituacao;
+                    break;
+            }
+
+            ctx.Consultas.Update(ConsultaAntiga);
+
+            ctx.SaveChanges();
+        }
+
+        public void Prontuario(int id, Consulta novoProntuario)
+        {
+            Consulta ConsultaAntiga = ctx.Consultas.Find(id);
+
+            if (novoProntuario.Descricao != null)
+            {
+                ConsultaAntiga.Descricao = novoProntuario.Descricao;
+            }
+
+            ctx.Consultas.Update(ConsultaAntiga);
+
+            ctx.SaveChanges();
+        }
+
     }
 }
