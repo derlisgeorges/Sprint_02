@@ -12,16 +12,58 @@ namespace senai.hroads.webApi.Repositories
     {
         HroadsContext ctx = new HroadsContext();
 
-        public void Atualizar(int id, Usuario usuarioAtualizado)
+        public void Atualizar(int id, Usuario UsuarioAtualizado)
         {
-            Usuario usuarioBuscado = ctx.Usuarios.Find(id);
+            Usuario UsuarioAntigo = ctx.Usuarios.Find(id);
 
-            if (usuarioAtualizado.Email != null)
+            if (UsuarioAtualizado.IdUsuario != 0)
             {
-                
+                UsuarioAntigo.IdUsuario = UsuarioAtualizado.IdUsuario;
             }
+
+            if (UsuarioAtualizado.IdTipoUsuario != null)
+            {
+                UsuarioAntigo.IdTipoUsuario = UsuarioAtualizado.IdTipoUsuario;
+            }
+
+            if (UsuarioAtualizado.Email != null)
+            {
+                UsuarioAntigo.Email = UsuarioAtualizado.Email;
+            }
+
+            if (UsuarioAtualizado.Senha != null)
+            {
+                UsuarioAntigo.Senha = UsuarioAtualizado.Senha;
+            }
+
+            ctx.Usuarios.Update(UsuarioAntigo);
+
+            ctx.SaveChanges();
 
         }
 
+        public Usuario BuscarPorId(int id)
+        {
+            return ctx.Usuarios.Find(id);
+        }
+
+        public void Cadastrar(Usuario novoUsuario)
+        {
+            ctx.Usuarios.Add(novoUsuario);
+
+            ctx.SaveChanges();
+        }
+
+        public void Deletar(int id)
+        {
+            ctx.Usuarios.Remove(BuscarPorId(id));
+
+            ctx.SaveChanges();
+        }
+
+        public List<Usuario> Listar()
+        {
+            return ctx.Usuarios.ToList();
+        }
     }
 }

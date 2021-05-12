@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dsgez\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {}
+    "C:\\Users\\dev\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dsgez\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {
+    "C:\\Users\\dev\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dsgez\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+        "projectUniqueName": "C:\\Users\\dev\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
         "projectName": "senai.hroads.webApi",
-        "projectPath": "C:\\Users\\dsgez\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
-        "packagesPath": "C:\\Users\\dsgez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dsgez\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
+        "projectPath": "C:\\Users\\dev\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dev\\Desktop\\Sprint_02\\HROADS\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dsgez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
